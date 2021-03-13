@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message box</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<style type="text/css">
+		.container{
+			background-color: skyblue;
+			margin-top: 8%;
+		}
+		input{
+			width: 100%;
+			padding: 1%;
+			font-weight: bold;
+		}
+		input:hover {
+			border: 2px solid skyblue;
+		}
+		.btn{
+			background: skyblue;
+			border: 2px solid grey;
+			box-shadow: 1px 1px 10px grey;
+            
+		}
+		.btn:hover {
+             background-color: tomato;
+		}
+	</style>
+</head>
+<body>
+   <div class="container p-5">
+   	<div class="row max-height align-items-center ">
+   	 <div class="main-containe m-auto col-10 text-center bg-light p-4">
+   	 	<h3 id="label" class="text-center font-weight-bold mb-4">A Message You Would Like To Pass</h3>
+   	 	<input type="text" name="" id="input">
+   	 	<button class="btn btn-lg font-weight-bold m-4 btn-align-center" onclick="prince()">Submit</button>
+   	 	<h3 class="text-center font-weight-bold mb-4">Last Message Delivered</h3>
+        <h2 class="text-center text-info"></h2>
+   	 </div>
+   	</div>
+   </div>
+
+   <script>
+   	function prince() {
+   	  	const input = document.querySelector('input').value;
+   	  	console.log(input);
+
+   	  	document.querySelector('h2').innerHTML = input;
+   	  	document.querySelector('input').value = "";
+   	  
+}
+   </script>
+</body>
+</html>
